@@ -3,17 +3,21 @@ package main
 import (
 	"fmt"
 
-	"./models"
+	"naja.io/mastermind/constants"
+	"naja.io/mastermind/engine"
+	"naja.io/mastermind/models"
 )
 
 func main() {
-	fmt.Println("hello world")
+	fmt.Println("Welcome to Mastermind in Golang !")
 
-	e := models.Board{
+	myBoard := models.Board{
 		BoardName: "MyBoard",
-		NbLines:   10,
-		NbColumns: 4,
+		NbLines:   constants.NbLines,
+		NbColumns: constants.NbColumns,
+		Secret:    engine.RandomSecret(),
 	}
-	e.LeavesRemaining()
+
+	myBoard.RevealSecret()
 
 }
