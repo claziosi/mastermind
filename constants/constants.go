@@ -4,7 +4,7 @@ type Colour int64
 
 const (
 	NbColumns   int    = 10
-	NbLines     int    = 4
+	NbLines     int    = 5
 	NbColors    int    = 9
 	Green       Colour = 0
 	Yellow             = 1
